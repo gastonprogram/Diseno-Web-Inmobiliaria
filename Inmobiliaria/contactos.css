@@ -1,0 +1,242 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    list-style: none;
+    
+}
+
+body{
+    background: rgb(45, 46, 48);
+    background-image: url(fondo_contactos.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 1000px;
+}
+
+.header{
+    background-color: rgb(45, 46, 48);
+    position: fixed;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 64px;
+    padding: 5px 10%;
+    z-index: 999;
+    top: 0;
+}
+
+.header .logo{
+    cursor: pointer;
+}
+
+.header .logo img{
+    height: 75px;
+    width: auto;
+}
+
+.header .nav-links{
+    list-style: none;
+}
+
+.header .nav-links li{
+    display: inline-block;
+    padding: 0px 20px;
+    transition: all ;
+    
+}
+
+.header .nav-links li:hover{
+    transform: scale(1.03);
+}
+
+.header .nav-links a{
+    font-size: 20px;
+    color: #bababa;
+    text-decoration: none;
+}
+
+.header .nav-links a:hover{
+    color: #ffffff;
+}
+
+.header .button button{
+    color: #003da5;
+    border: 2px solid #003da5;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    background-color: #fbfbfb;
+    padding: 9px 25px;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-decoration: none;
+    font-size: 15px;
+    z-index: 1000;
+    font-weight: bold;
+}
+
+.header .button button:hover{
+    background-color: #003da5;
+    color: #fff;
+}
+
+.form{
+    position: relative;
+    background-color: rgba(45, 46, 48, 0.9);
+    margin: auto;
+    width: 90%;
+    max-width: 400px;
+    padding: 30px 30px;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    text-align: center;
+    margin-top: 150px;
+    margin-bottom: 100px;
+}
+
+.form__title{
+    font-size: 32px;
+    margin-bottom: 8px;
+    color: #fff;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+}
+
+.form__paragraph{
+    font-weight: 300;
+    color: #fff;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+}
+
+.form__link{
+    font-weight: 400;
+    color: #000;
+}
+
+
+.form__container{
+    margin-top: 48px;
+    display: grid;
+    gap: 40px;
+}
+
+.form__group{
+    position: relative;
+}
+
+.form__input{
+    width: 100%;
+    background: none;
+    color: #e7e7e7;
+    font-weight: 500;
+    font-size: 16px;
+    padding: 11px 4px;
+    margin-top: 7px;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #bababa;
+}
+
+
+.form__input:-webkit-autofill {
+    -webkit-text-fill-color: #e7e7e7;
+    -webkit-box-shadow: 0 1px 1px 100px rgba(45, 46, 48, 1) inset;
+}
+
+
+
+.form__label{
+    color: #fff;
+    cursor: pointer;
+    position: absolute;
+    font-size: 25px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    top: 0;
+    left: 5px;
+    transform: translateY(-12px) scale(.7);
+    transform-origin: left top;
+}
+
+
+.form__submit{
+    background-color: #003da5;
+    color: #fff;
+    font-size: 20px;
+    padding: 12px 0px;
+    border: none;
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    cursor: pointer;
+}
+
+.form__line{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #003da5;
+    transform: scale(0);
+    transform: left bottom;
+}
+
+
+.casilla{
+    color: #fff;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+}
+
+.footer-container{
+    max-width: 1200px;
+    margin: 0px auto;
+}
+
+.footer{
+    background-color: rgb(45, 46, 48);
+    padding: 30px 0px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer-filas{
+    display: flex;
+    
+}
+
+.footer-links{
+    width: 50%;
+    padding: 0px 50px;
+}
+
+.footer-links a{
+    text-decoration: none;
+    color: #bababa;
+}
+
+.footer-links h4{
+    color: #ffffff;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+        
+.footer-links li{
+    padding-right: 10px;
+}
+
+.telefono{
+    font-size: 14px;
+}
