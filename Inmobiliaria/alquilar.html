@@ -7,6 +7,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    
+    <script src="jquery-ui-1.13.3/external/jquery/jquery.js"></script>
+    <script src="jquery.js"></script>
 </head>
 <body>
     <header class="header">
@@ -15,10 +18,10 @@
         </div>
         <nav>
             <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="comprar.html">Comprar</a></li>
-                <li><a href="alquilar.html">Alquilar</a></li>
-                <li><a href="Quienes somos.html">Quienes Somos</a></li>
+                <li><a href="index.html" id="index">Home</a></li>
+                <li><a href="comprar.html" id="comprar">Comprar</a></li>
+                <li><a href="alquilar.html" id="alquilar">Alquilar</a></li>
+                <li><a href="Quienes_somos.html" id="Quienes_somos">Quienes Somos</a></li>
             </ul> 
         </nav>
         <a href="contactos.html" class="button"><button>Contacto</button></a>
@@ -50,6 +53,19 @@
             </div>
             <img src="depto_alquiler2.jpg" alt="" class="articulo-img">
         </div>
+        <div class="articulo">
+            <div class="articulo-parrafo">
+                <h2>En Alquiler</h2>
+                <p>Con su encanto clásico y ambiente tranquilo,
+                    este apartamento antiguo ofrece calma
+                    en medio del ajetreo de la ciudad,
+                    convirtiéndose en una elección irresistible
+                    para aquellos que anhelan una vida urbana relajada.
+                </p>
+                <h3>220 USD</h3>
+            </div>
+            <img src="depto_alquiler3.jpg" alt="" class="articulo-img">
+        </div>
     </main>
     <hr class="divisor">
     <footer>
@@ -62,7 +78,7 @@
                     <div class="footer-links">
                         <h4>Compañia</h4>
                         <ul>
-                            <li><a href="Quienes Somos.html">Nosotros</a></li>
+                            <li><a href="Quienes_somos.html">Nosotros</a></li>
                             <li><a href="comprar.html">Servicios</a></li>
                         </ul>
                     </div>

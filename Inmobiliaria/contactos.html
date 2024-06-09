@@ -7,6 +7,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <script src="jquery-ui-1.13.3/external/jquery/jquery.js"></script>
+    <script src="jquery.js"></script>
 </head>
 <body>
     <header class="header">
@@ -15,23 +17,25 @@
         </div>
         <nav>
             <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="comprar.html">Comprar</a></li>
-                <li><a href="alquilar.html">Alquilar</a></li>
-                <li><a href="Quienes somos.html">Quienes Somos</a></li>
+                <li><a href="index.html" id="index">Home</a></li>
+                <li><a href="comprar.html" id="comprar">Comprar</a></li>
+                <li><a href="alquilar.html" id="alquilar">Alquilar</a></li>
+                <li><a href="Quienes_somos.html" id="Quienes_somos">Quienes Somos</a></li>
             </ul> 
         </nav>
         <a href="contactos.html" class="button"><button>Contacto</button></a>
     </header>
     <div class="encabezado-img">
     </div>
-    <form class="form" autocomplete="off">
+
+
+    <form class="form" autocomplete="off"  id="formulario">
         <h2 class="form__title">Envienos un mensaje</h2>
-        <p class="form__paragraph">Completá el formulario para contactarnos sobre cualquier pregunta o comentario que tengas y nos contactaremos a la brevedad.
-            
-        </p>
+        <p class="form__paragraph">Completá el formulario para contactarnos sobre cualquier pregunta o comentario que tengas y nos contactaremos a la brevedad.</p>
+        
 
         <div class="form__container">
+
             <div class="form__group">
                 <input type="text" id="name" class="form__input">
                 <label for="name" class="form__label">Nombre y apellido</label>
@@ -68,7 +72,6 @@
 
         </div>
     </form>
-
     <footer>
         <footer>
             <div class="footer">
@@ -80,17 +83,16 @@
                         <div class="footer-links">
                             <h4>Compañia</h4>
                             <ul>
-                                <li><a href="Quienes Somos.html">Nosotros</a></li>
-                                <li><a href="comprar.html">Servicios</a></li>
+                                <li><a href="Quienes_somos.html" id="Quienes_somos_footer">Nosotros</a></li>
+                                <li><a href="comprar.html" id="comprar_footer">Servicios</a></li>
                             </ul>
                         </div>
                         <div class="footer-links">
                             <h4>Consultas</h4>
                             <ul>
-                                <li><a href="contactos.html">Contacto</a></li>
+                                <li><a href="contactos.html" id="contactos_footer">Contacto</a></li>
                                 <li class="telefono"><a href="tel:+1234567890">Numero: +54 011567890</a></li>
                             </ul>
-    
                         </div>
                         <div class="footer-links">
                             <h4>Siguenos</h4>
@@ -107,5 +109,53 @@
     
             </div>
         </footer>
-</body>
+
+        <div id="overlay" class="hidden">
+            <div id="message">¡Gracias por tu mensaje!
+                <br>
+                <br> Lo hemos recibido y nos pondremos en contacto contigo en breve.
+            </div>
+        </div>
+
+        <script>
+
+            document.getElementById('formulario').addEventListener('submit', function (e) {
+                e.preventDefault();
+        
+                const nombre = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                const telefono = document.getElementById('tel').value;
+                const direccion = document.getElementById('text').value;
+                const comentarios = document.getElementById('comentarios').value;
+                const recibirCopia = document.getElementById('casilla').checked;
+        
+                const formData = {
+                    nombre,
+                    email,
+                    telefono,
+                    direccion,
+                    comentarios,
+                    recibirCopia
+                };
+        
+                const jsonString = JSON.stringify(formData, null, 2);
+        
+                console.log(jsonString);
+                
+                document.getElementById('formulario').reset();
+            });;
+            
+
+            $(document).ready(function() {
+                $("#formulario").on("submit", function(event) {
+                    event.preventDefault();
+    
+                    $("#overlay").removeClass("hidden").fadeIn(500).delay(3000).fadeOut(1000, function() {
+                        $(this).addClass("hidden");
+                    });
+                });
+            });
+
+        </script>
+    </body>
 </html>
