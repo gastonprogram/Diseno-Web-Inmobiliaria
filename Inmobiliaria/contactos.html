@@ -120,14 +120,16 @@
 
             document.getElementById('formulario').addEventListener('submit', function (e) {
                 e.preventDefault();
-        
+
+                //guardar la informacion del formulario
                 const nombre = document.getElementById('name').value;
                 const email = document.getElementById('email').value;
                 const telefono = document.getElementById('tel').value;
                 const direccion = document.getElementById('text').value;
                 const comentarios = document.getElementById('comentarios').value;
                 const recibirCopia = document.getElementById('casilla').checked;
-        
+
+                //añadir la informacion a un objeto
                 const formData = {
                     nombre,
                     email,
@@ -144,7 +146,7 @@
                 document.getElementById('formulario').reset();
             });;
             
-
+            //mensaje post envio de formulario
             $(document).ready(function() {
                 $("#formulario").on("submit", function(event) {
                     event.preventDefault();
